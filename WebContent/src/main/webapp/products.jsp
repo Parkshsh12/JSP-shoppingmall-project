@@ -1,24 +1,25 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "dto.Product" %>
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session"></jsp:useBean>
+<%@ page import = "dao.ProductRepository" %>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>ìƒí’ˆëª©ë¡</title>
 </head>
 <body>
 	<jsp:include page="menu.jsp"/>
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">»óÇ° ¸ñ·Ï</h1>
+			<h1 class="display-3">ìƒí’ˆ ëª©ë¡</h1>
 		</div>
 	</div>
 	<%
-		ArrayList<Product> listOfproducts = productDAO.getAllProducts();
+		ProductRepository dao = ProductRepository.getInstance();
+		ArrayList<Product> listOfproducts = dao.getAllProducts();
 	%>
 	<div class="container">
 		<div class="row" align="center">
@@ -29,9 +30,9 @@
 			<div class="col-md-4">
 				<h3><%= product.getpName()%></h3>
 				<p><%=product.getDescription() %>
-				<p><%=product.getUnitPrice() %>¿ø
+				<p><%=product.getUnitPrice() %>ì›
 				<p> <a href="./product.jsp?id=<%=product.getProductId() %>"
-				class="btn btn-secondary" role="button"> »ó¼¼ Á¤º¸ &raquo;></a>
+				class="btn btn-secondary" role="button"> ìƒì„¸ ì •ë³´ &raquo;></a>
 			</div>
 			<%
 				}
