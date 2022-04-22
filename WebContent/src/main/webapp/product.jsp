@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ page import="dto.Product" %>
 <%@ page import="dao.ProductRepository" %>
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session"/>
 <!DOCTYPE html>
 <html>
 <head>
