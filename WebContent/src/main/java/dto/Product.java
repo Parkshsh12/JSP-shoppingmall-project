@@ -6,14 +6,15 @@ public class Product implements Serializable {
 	
 	private static final long serialVersionUID = -4274700572038677000L;
 	
-	private String productId; //»óÇ° ¾ÆÀÌµð
-	private String pName; // »óÇ°¸í
-	private int unitPrice; // »óÇ° °¡°Ý
-	private String description; // »óÇ° ¼³¸í
-	private String manufacturer; // Á¦Á¶»ç
-	private String category; // ºÐ·ù
-	private long unitsInStock; // Àç°í ¼ö
-	private String condition; // ½Å»óÇ° or Áß°íÇ° or Àç»ýÇ°
+	private String productId; //ï¿½ï¿½Ç° ï¿½ï¿½ï¿½Ìµï¿½
+	private String pName; // ï¿½ï¿½Ç°ï¿½ï¿½
+	private int unitPrice; // ï¿½ï¿½Ç° ï¿½ï¿½ï¿½ï¿½
+	private String description; // ï¿½ï¿½Ç° ï¿½ï¿½ï¿½ï¿½
+	private String manufacturer; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	private String category; // ï¿½Ð·ï¿½
+	private long unitsInStock; // ï¿½ï¿½ï¿½ ï¿½ï¿½
+	private String condition; // ï¿½Å»ï¿½Ç° or ï¿½ß°ï¿½Ç° or ï¿½ï¿½ï¿½Ç°
+	private String filename;
 	
 	public Product() {
 		super();
@@ -70,6 +71,12 @@ public class Product implements Serializable {
 	}
 	public void setCondition(String condition) {
 		this.condition = condition;
+	}
+	public String getFilename() {
+		return filename;
+	}
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 	
 }

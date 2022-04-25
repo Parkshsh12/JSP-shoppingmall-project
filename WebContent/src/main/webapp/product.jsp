@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/bootstrap/bootstrap.min.css"/>
 <meta charset="UTF-8">
 <title>상품정보</title>
 </head>
@@ -23,6 +23,9 @@
 	%>
 	<div class="container">
 		<div class="row">
+			<div class="col-md-5">
+				<img src="./resources/image/<%=product.getFilename() %>" style="width:100%">
+			</div>
 			<div class="col-md-6">
 				<h3><%=product.getpName()%></h3>
 				<p><%=product.getDescription() %>
