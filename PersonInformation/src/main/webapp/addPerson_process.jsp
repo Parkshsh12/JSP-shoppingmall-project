@@ -1,4 +1,4 @@
-<%@page import="java.util.Enumeration"%>
+<%@ page import="java.util.Enumeration"%>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@page import="dto.Person"%>
@@ -27,6 +27,7 @@
 		String phoneNumber2 = multi.getParameter("phoneNumber2");
 		String phoneNumber3 = multi.getParameter("phoneNumber3");
 		String sex = multi.getParameter("sex");
+		String email = multi.getParameter("email");
 		String description = multi.getParameter("description");
 		String address = multi.getParameter("address");
 		
@@ -46,6 +47,7 @@
 		newPerson.setSex(sex);
 		newPerson.setDescription(description);
 		newPerson.setFilename(fileName);
+		newPerson.setEmail(email);
 		
 		dao.addArrayList(newPerson);
 		response.sendRedirect("people.jsp");

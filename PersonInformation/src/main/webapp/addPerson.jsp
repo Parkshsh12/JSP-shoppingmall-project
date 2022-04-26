@@ -47,6 +47,12 @@
 				</div>
 			</div>
 			<div class="form-group row">
+				<label class="col-sm-2">이메일</label>
+				<div class="col-sm-3">
+					<input type="email" name="email" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
 				<label class="col-sm-2">성별</label>
 				<div class="col-sm-3">
 					<input type="radio" name="sex" value="남성" checked>남성

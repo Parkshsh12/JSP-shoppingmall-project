@@ -15,6 +15,7 @@ public class Person implements Serializable{
 	private String sex;
 	private String description;
 	private String filename;
+	private String email;
 	
 	public String getName() {
 		return name;
@@ -69,6 +70,12 @@ public class Person implements Serializable{
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}	
 	
 	

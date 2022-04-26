@@ -25,7 +25,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
-				<img src="./resources/image/<%=person.getFilename() %>" style="width:100%">
+				<img src="./resources/image/<%=person.getFilename() %>" style="width:100%; height:100%">
 			</div>
 			<div class="col-md-6">
 				<h3><%=person.getName() %></h3>

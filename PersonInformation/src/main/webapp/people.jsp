@@ -31,7 +31,7 @@
 					Person person = arraylist.get(i);
 			%>
 			<div class="col-md-4">
-				<img src="./resources/image/<%=person.getFilename() %>" style="width:100%">
+				<img src="./resources/image/<%=person.getFilename() %>" style="width:100%; height:100%">
 				<h3><%=person.getName() %></h3>
 				<p> <a class="btn btn-secondary" href="./person.jsp?id=<%=person.getPersonId() %>" role="button">
 					상세 정보 &raquo;
