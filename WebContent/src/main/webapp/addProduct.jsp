@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/bootstrap/bootstrap.min.css"/>
 <script type="text/javascript" src="./resources/js/validation.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/bootstrap/bootstrap.min.css"/>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
