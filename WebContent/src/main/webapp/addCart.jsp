@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
+	<%  
 		String id = request.getParameter("id");
 		if(id == null || id.trim().equals("")){
 			response.sendRedirect("products.jsp");
@@ -32,6 +32,7 @@
 				break;
 			}
 		}
+		
 		ArrayList<Product> list = (ArrayList<Product>) session.getAttribute("cartlist");
 		if(list == null){
 			list = new ArrayList<Product>();
@@ -48,6 +49,7 @@
 				goodsQnt.setQuantity(orderQuantity);
 			}
 		}
+		
 		if(cnt == 0){
 			goods.setQuantity(1);
 			list.add(goods);

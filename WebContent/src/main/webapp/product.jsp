@@ -46,7 +46,12 @@
 				<p> <b>분류</b> : <%=product.getCategory() %>
 				<p> <b>재고 수</b> : <%=product.getUnitsInStock() %>
 				<h4><%=product.getUnitPrice() %>원</h4>
-				<p><form name="addForm" action="./addCart.jsp?id=<%=product.getProductId()%>" method="post">
+					<%
+						if(product != null){
+							session.setAttribute("dto", product);
+						}
+					%>
+				<p><form name="addForm" action="./addCart2.jsp?id=<%=product.getProductId()%>" method="post">
 					<a href="#" class="btn btn-info" onclick="addToCart()">상품 주문 &raquo;</a>					
 					<a href="./cart.jsp" class="btn btn-warning">장바구니 &raquo;</a>
 					<a href="./products.jsp" class="btn btn-secondary">상품 목록 &raquo;</a>
