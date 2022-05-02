@@ -6,7 +6,7 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 
-	String carId = session.getId();
+	String cartId = session.getId();
 	
 	String shipping_cartId = "";
 	String shipping_name = "";
