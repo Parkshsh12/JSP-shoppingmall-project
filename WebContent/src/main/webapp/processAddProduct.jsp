@@ -12,6 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%@ include file="dbconn.jsp" %>
 	<%
 		request.setCharacterEncoding("UTF-8");
 		// 이미지업로드
@@ -54,20 +55,22 @@
 		String fileName = multi.getFilesystemName(fname);
 		// 이미지업로드
 		
-		ProductRepository dao = ProductRepository.getInstance();
-		Product newProduct = new Product();
+		// 데이터베이스 추가
+		PreparedStatement pstmt = null;
 		
-		newProduct.setProductId(productId);
-		newProduct.setpName(name);
-		newProduct.setUnitPrice(price);
-		newProduct.setDescription(description);
-		newProduct.setManufacturer(manufacturer);
-		newProduct.setCategory(category);
-		newProduct.setUnitsInStock(stock);
-		newProduct.setCondition(condition);
-		newProduct.setFilename(fileName);
-		
-		dao.addProduct(newProduct);
+		String sql = "insert into product values(?,?,?,?,?,?,?,?,?)";
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, productId);
+		pstmt.setString(2, name);
+		pstmt.setString(3, unitPrice);
+		pstmt.setString(4, description);
+		pstmt.setString(5, category);
+		pstmt.setString(6, manufacturer);
+		pstmt.setString(7, unitsInStock);
+		pstmt.setString(8, condition);
+		pstmt.setString(9, fileName);
+		pstmt.executeUpdate();
+		// 데이터베이스 추가 끝		
 		response.sendRedirect("products.jsp");
 	%>
 </body>
